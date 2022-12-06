@@ -33,6 +33,10 @@ public class Person {
         return (name + " " + surname + " has " + tickets + " tickets");
     }
 
+    public String fullName() {
+        return (name + " " + surname + " ");
+    }
+
     public Person generation(int maxTickets) {
         name = nameArray[new Random().nextInt(nameArray.length - 1)];
         surname = surnameArray[new Random().nextInt(surnameArray.length - 1)];
@@ -40,7 +44,11 @@ public class Person {
         return new Person(name, surname, tickets);
     }
 
-    public void useЕicket(){
-        tickets -=1;
+    public int numTicket() {
+        return tickets;
+    }
+
+    public void useTicket() {
+        tickets -= 1;
     }
 }
