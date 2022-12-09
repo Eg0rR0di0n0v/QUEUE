@@ -5,13 +5,10 @@ public class Main {
     public static void main(String[] args) {
         final int numPerson = 5;
         final int maxTickets = 10;
-        new Person();
-        Person bufPerson;
-        Queue<Person> qPerson;
-        qPerson = generateClients(numPerson, maxTickets);
+        Queue<Person> qPerson = generateClients(numPerson, maxTickets);
 
         while (!qPerson.isEmpty()) {
-            bufPerson = qPerson.remove();
+            Person bufPerson = qPerson.remove();
             if (bufPerson.numTicket() > 0) {
                 bufPerson.useTicket();
                 qPerson.add(bufPerson);
